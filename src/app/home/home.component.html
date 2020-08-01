@@ -1,1 +1,15 @@
-<p>home works!</p>
+<div class="container">
+  <h2>Search For A Stock</h2>
+  <form class="form-inline" #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="stock" class="sr-only">Stock</label>
+      <input
+        type="text"
+        class="form-control"
+        id="stock"
+        placeholder="Ex. AAPL"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Search For Stock</button>
+  </form>
+</div>

@@ -7,5 +7,10 @@ $primary-overlay: rgba(93, 123, 147, 0.8);
 // --color-primary: ;
 // --color-primary-light: #f7a992;
 // --color-primary-dark: #82a0c2;
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import "bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
