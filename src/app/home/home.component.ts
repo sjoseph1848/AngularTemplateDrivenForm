@@ -41,8 +41,12 @@ export class HomeComponent implements OnInit {
   }
 
   getStockProfile(stock: string) {
-    let url = `https://nottingham1848.herokuapp.com/stocks/${stock}`;
+    let url = `https://nottingham-1848-slayer-robin.azurewebsites.net/api/profile/${stock}`;
     return this.http.get(url);
+  }
+
+  getMoreStockInfo(stock: string) {
+    console.log(stock)
   }
 
 
