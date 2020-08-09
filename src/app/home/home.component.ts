@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
+    this.isMoreInfo = false;
     if (form.valid) {
       const stock = this.getStockProfile(form.value.stock);
       stock.subscribe((data: any) => {
