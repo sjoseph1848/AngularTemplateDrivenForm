@@ -18,6 +18,8 @@ $primary-overlay: rgba(93, 123, 147, 0.8);
 
 @media (max-width: 768px) {
   #navbarCollapse {
-    background-color: whitesmoke;
+    a {
+      color: $secondary;
+    }
   }
 }
