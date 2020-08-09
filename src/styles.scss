@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-$primary: #fdf0c4;
+$primary: #004b64;
+$secondary: #fddbd4;
 $primary-overlay: rgb(253, 240, 196, 0.8);
 $primary-overlay: rgba(93, 123, 147, 0.8);
 
@@ -13,4 +14,10 @@ $primary-overlay: rgba(93, 123, 147, 0.8);
 
 * {
   font-family: "Open Sans", sans-serif;
+}
+
+@media (max-width: 768px) {
+  #navbarCollapse {
+    background-color: whitesmoke;
+  }
 }

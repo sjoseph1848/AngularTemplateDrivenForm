@@ -1,0 +1,27 @@
+@import "src/styles";
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  color: $secondary;
+}
+
+.navbar {
+  box-shadow: 2px 2px 5px $secondary;
+  opacity: 0.9;
+  .nav-item {
+    font-size: 1.4rem;
+    color: $secondary;
+  }
+}
+
+.nav-link:hover,
+a:hover {
+  color: white;
+}
+
+a {
+  color: $secondary;
+}

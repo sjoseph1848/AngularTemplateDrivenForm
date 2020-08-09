@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   };
   validStock: boolean = false;
   profileStock: any;
+  isMoreInfo: boolean = false;
 
   constructor(private http: HttpClient) { }
 
@@ -46,7 +47,8 @@ export class HomeComponent implements OnInit {
   }
 
   getMoreStockInfo(stock: string) {
-    console.log(stock)
+    this.isMoreInfo = true;
+    console.log(stock);
   }
 
 

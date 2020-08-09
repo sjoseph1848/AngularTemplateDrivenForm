@@ -1,0 +1,27 @@
+<nav id="main-nav" class="navbar navbar-expand-md bg-primary fixed-top py-4">
+  <div class="container">
+    <a routerLink="./" class="navbar-brand">
+      <img src="" width="50" height="50" alt="" style="border-radius: 50%;" />
+      <h3 class="d-inline align-middle">Stock Search</h3>
+    </a>
+    <button
+      class="navbar-toggler"
+      data-toggle="collapse"
+      data-target="#navbarCollapse"
+      (click)="toggleNavbar()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      [ngClass]="{ show: navbarOpen }"
+      id="navbarCollapse"
+    >
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a [routerLink]="['/screen']" class="nav-link">Screener</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

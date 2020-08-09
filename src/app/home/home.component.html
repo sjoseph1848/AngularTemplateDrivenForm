@@ -1,8 +1,13 @@
-<div class="container mt-5">
+<div id="stock-form" class="container">
   <div class="row">
     <div class="col-lg m-5">
       <h5>Enter Symbol</h5>
-      <form class="form-inline" #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <form
+        autocomplete="off"
+        class="form-inline"
+        #form="ngForm"
+        (ngSubmit)="onSubmit(form)"
+      >
         <div class="form-group mx-sm-3 mb-2">
           <label for="stock" class="sr-only">Stock</label>
           <input
@@ -15,7 +20,7 @@
             name="stock"
           />
         </div>
-        <button type="submit" class="btn btn-primary mt -2 mb-2">
+        <button type="submit" class="btn btn-primary my-2">
           Search For Stock
         </button>
       </form>
@@ -41,7 +46,7 @@
       </div>
     </div>
     <div class="col-lg m-5">
-      <div class="card" style="width: 18rem;">
+      <div *ngIf="isMoreInfo" class="card" style="width: 18rem;">
         <div class="card-header">
           Featured
         </div>
