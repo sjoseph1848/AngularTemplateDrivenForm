@@ -1,46 +1,56 @@
 <div class="container mt-5">
-  <h5>Enter Symbol</h5>
-  <form class="form-inline" #form="ngForm" (ngSubmit)="onSubmit(form)">
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="stock" class="sr-only">Stock</label>
-      <input
-        type="text"
-        class="form-control mt-2"
-        [(ngModel)]="copiedStock.stock"
-        #stock="ngModel"
-        id="stock"
-        placeholder="Ex. AAPL"
-        name="stock"
-      />
+  <div class="row">
+    <div class="col-lg m-5">
+      <h5>Enter Symbol</h5>
+      <form class="form-inline" #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="stock" class="sr-only">Stock</label>
+          <input
+            type="text"
+            class="form-control mt-2"
+            [(ngModel)]="copiedStock.stock"
+            #stock="ngModel"
+            id="stock"
+            placeholder="Ex. AAPL"
+            name="stock"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary mt -2 mb-2">
+          Search For Stock
+        </button>
+      </form>
     </div>
-    <button type="submit" class="btn btn-primary mt -2 mb-2">
-      Search For Stock
-    </button>
-  </form>
-</div>
-
-<div *ngIf="profileStock" class="container mt-5">
-  <div class="card" style="width: 18rem;">
-    <img [src]="profileStock.image" class="card-img-top" alt="stockImage" />
-    <div class="card-body">
-      <h5 class="card-title">{{ profileStock.companyName }}</h5>
-      <p class="card-text">{{ profileStock.description | slice: 0:150 }}...</p>
-      <a (click)="getMoreStockInfo(profileStock)" class="btn btn-primary"
-        >See More</a
-      >
+    <div class="col-lg m-5">
+      <div *ngIf="profileStock">
+        <div class="card" style="width: 18rem;">
+          <img
+            [src]="profileStock.image"
+            class="card-img-top"
+            alt="Stock Does Not Have an Image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ profileStock.companyName }}</h5>
+            <p class="card-text">
+              {{ profileStock.description | slice: 0:150 }}...
+            </p>
+            <a (click)="getMoreStockInfo(profileStock)" class="btn btn-primary"
+              >See More</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-<div class="container mt-5">
-  <div class="card" style="width: 18rem;">
-    <div class="card-header">
-      Featured
+    <div class="col-lg m-5">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          Featured
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
     </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
   </div>
 </div>
