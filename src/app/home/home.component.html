@@ -8,7 +8,7 @@
         #form="ngForm"
         (ngSubmit)="onSubmit(form)"
       >
-        <div class="form-group mx-sm-3 mb-2">
+        <div class="form-group">
           <label for="stock" class="sr-only">Stock</label>
           <input
             type="text"
@@ -20,12 +20,12 @@
             name="stock"
           />
         </div>
-        <button type="submit" class="btn btn-primary my-2">
+        <button type="submit" class="btn btn-primary m-2">
           Search For Stock
         </button>
       </form>
     </div>
-    <div class="col-lg m-5">
+    <div class="col-lg my-5">
       <div *ngIf="profileStock">
         <div class="card" style="width: 18rem;">
           <img
@@ -45,15 +45,31 @@
         </div>
       </div>
     </div>
-    <div class="col-lg m-5">
+    <div class="col-lg my-5">
       <div *ngIf="isMoreInfo" class="card" style="width: 18rem;">
         <div class="card-header">
-          Featured
+          {{ profileStock.companyName }}
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item">
+            Exchange: {{ profileStock.exchangeShortName }}
+          </li>
+          <li class="list-group-item">Industry: {{ profileStock.industry }}</li>
+          <li class="list-group-item">Sector: {{ profileStock.sector }}</li>
+          <li class="list-group-item">
+            # of Full-Time Employees: {{ profileStock.fullTimeEmployees }}
+          </li>
+          <li class="list-group-item">Market Cap: {{ profileStock.mktCap }}</li>
+          <li class="list-group-item">Price: {{ profileStock.price }}</li>
+          <li class="list-group-item">Changes: {{ profileStock.changes }}</li>
+          <li class="list-group-item">Range: {{ profileStock.range }}</li>
+          <li class="list-group-item">Volume Avg: {{ profileStock.volAvg }}</li>
+          <li class="list-group-item">Beta: {{ profileStock.beta }}</li>
+          <li class="list-group-item">DCF: {{ profileStock.dcf }}</li>
+          <li class="list-group-item">DCF Diff: {{ profileStock.dcfDiff }}</li>
+          <li class="list-group-item">
+            Last Dividend: {{ profileStock.lastDiv }}
+          </li>
         </ul>
       </div>
     </div>

@@ -7,12 +7,14 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ScreenerComponent } from './screener/screener.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    ScreenerComponent
+    ScreenerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
