@@ -3,7 +3,105 @@
     <div
       class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 m-5"
     >
-      <h1>Stock Screen Form</h1>
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div
+          id="screen-data"
+          ngModelGroup="screenData"
+          #screenData="ngModelGroup"
+        >
+          <div class="form-group">
+            <label for="exchange">Market Cap Min</label>
+            <select id="exchange" class="form-control" name="exchange">
+              <option value="1000000">1 Million</option>
+              <option value="100000000">100 Million</option>
+              <option value="500000000">500 Million</option>
+              <option value="1000000000">1 Billion</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="betaMin">Beta Min</label>
+            <select id="betaMin" class="form-control" name="betaMin">
+              <option value="2">2</option>
+              <option value="1.5">1.5</option>
+              <option value="1.25">1.25</option>
+              <option value="1">1</option>
+              <option value="0.5">0.5</option>
+              <option value="0">0</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="volumeMin">Volume Min</label>
+            <select id="volumeMin" class="form-control" name="volumeMin">
+              <option value="10000">10,000</option>
+              <option value="50000">50,000</option>
+              <option value="100000">100,000</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dividendMin">Dividend Min</label>
+            <select id="dividendMin" class="form-control" name="dividendMin">
+              <option value="0">0</option>
+              <option value=".50">0.50</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="sector">Select Sector</label>
+            <select id="sector" class="form-control" name="sector">
+              <option value="Consumer Cyclical">Consumer Cyclical</option>
+              <option value="Energy">Energy</option>
+              <option value="Technology">Technology</option>
+              <option value="Industrials">Industrials</option>
+              <option value="Financial Services">Financial Services</option>
+              <option value="Basic Materials">Basic Materials</option>
+              <option value="Communication Services"
+                >Communication Services</option
+              >
+              <option value="Consumer Defensive">Consumer Defensive</option>
+              <option value="Healthcare">Healthcare</option>
+              <option value="Real Estate">Real Estate</option>
+              <option value="Utilities">Utilities</option>
+              <option value="Industrial Goods">Industrial Goods</option>
+              <option value="Financial">Financial</option>
+              <option value="Services">Services</option>
+              <option value="Conglomerates">Conglomerates</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="industry">Select Industry</label>
+            <select id="industry" class="form-control" name="industry">
+              <option value="Autos">Autos</option>
+              <option value="Banks">Banks</option>
+              <option value="Banks Diversified">Banks Diversified</option>
+              <option value="Software">Software</option>
+              <option value="Banks Regional">Banks Regional</option>
+              <option value="Beverages Alcoholic">Beverages Alcoholic</option>
+              <option value="Beverages Brewers">Beverages Brewers</option>
+              <option value="Beverages Non-Alcoholic"
+                >Beverages Non-Alcoholic</option
+              >
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="exchange">Select Exchange</label>
+            <select id="exchange" class="form-control" name="exchange">
+              <option value="nyse">NYSE</option>
+              <option value="nasdaq">NASDAQ</option>
+              <option value="amex">AMEX</option>
+              <option value="euronex">EURONEX</option>
+              <option value="tsx">TSX</option>
+              <option value="etf">ETF</option>
+              <option value="mutual_fund">Mutual Fund</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled]="!f.valid">
+          Submit
+        </button>
+      </form>
     </div>
   </div>
 </div>
