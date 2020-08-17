@@ -7,7 +7,13 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./screener.component.scss']
 })
 export class ScreenerComponent implements OnInit {
-
+  defaultMarketCap = "1000000";
+  defaultBeta = "1"
+  defaultVolume = "10000";
+  defaultDividend = "0";
+  defaultSector = "Technology";
+  defaultIndustry = "Software";
+  defaultExchange = "nyse";
   constructor() { }
 
   ngOnInit() {

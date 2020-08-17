@@ -10,8 +10,13 @@
           #screenData="ngModelGroup"
         >
           <div class="form-group">
-            <label for="exchange">Market Cap Min</label>
-            <select id="exchange" class="form-control" name="exchange">
+            <label for="marketCap">Market Cap Min</label>
+            <select
+              id="marketCap"
+              class="form-control"
+              name="marketCap"
+              [ngModel]="defaultMarketCap"
+            >
               <option value="1000000">1 Million</option>
               <option value="100000000">100 Million</option>
               <option value="500000000">500 Million</option>
@@ -20,7 +25,12 @@
           </div>
           <div class="form-group">
             <label for="betaMin">Beta Min</label>
-            <select id="betaMin" class="form-control" name="betaMin">
+            <select
+              id="betaMin"
+              class="form-control"
+              name="betaMin"
+              [ngModel]="defaultBeta"
+            >
               <option value="2">2</option>
               <option value="1.5">1.5</option>
               <option value="1.25">1.25</option>
@@ -31,7 +41,12 @@
           </div>
           <div class="form-group">
             <label for="volumeMin">Volume Min</label>
-            <select id="volumeMin" class="form-control" name="volumeMin">
+            <select
+              id="volumeMin"
+              class="form-control"
+              name="volumeMin"
+              [ngModel]="defaultVolume"
+            >
               <option value="10000">10,000</option>
               <option value="50000">50,000</option>
               <option value="100000">100,000</option>
@@ -39,7 +54,12 @@
           </div>
           <div class="form-group">
             <label for="dividendMin">Dividend Min</label>
-            <select id="dividendMin" class="form-control" name="dividendMin">
+            <select
+              id="dividendMin"
+              class="form-control"
+              name="dividendMin"
+              [ngModel]="defaultDividend"
+            >
               <option value="0">0</option>
               <option value=".50">0.50</option>
               <option value="1">1</option>
@@ -48,21 +68,26 @@
 
           <div class="form-group">
             <label for="sector">Select Sector</label>
-            <select id="sector" class="form-control" name="sector">
-              <option value="Consumer Cyclical">Consumer Cyclical</option>
+            <select
+              id="sector"
+              class="form-control"
+              name="sector"
+              [ngModel]="defaultSector"
+            >
+              <option value="Consumer%20Cyclical">Consumer Cyclical</option>
               <option value="Energy">Energy</option>
               <option value="Technology">Technology</option>
               <option value="Industrials">Industrials</option>
-              <option value="Financial Services">Financial Services</option>
-              <option value="Basic Materials">Basic Materials</option>
-              <option value="Communication Services"
+              <option value="Financial%20Services">Financial Services</option>
+              <option value="Basic%20Materials">Basic Materials</option>
+              <option value="Communication%20Services"
                 >Communication Services</option
               >
-              <option value="Consumer Defensive">Consumer Defensive</option>
+              <option value="Consumer%20Defensive">Consumer Defensive</option>
               <option value="Healthcare">Healthcare</option>
-              <option value="Real Estate">Real Estate</option>
+              <option value="Real%20Estate">Real Estate</option>
               <option value="Utilities">Utilities</option>
-              <option value="Industrial Goods">Industrial Goods</option>
+              <option value="Industrial%20Goods">Industrial Goods</option>
               <option value="Financial">Financial</option>
               <option value="Services">Services</option>
               <option value="Conglomerates">Conglomerates</option>
@@ -71,15 +96,20 @@
 
           <div class="form-group">
             <label for="industry">Select Industry</label>
-            <select id="industry" class="form-control" name="industry">
+            <select
+              id="industry"
+              class="form-control"
+              name="industry"
+              [ngModel]="defaultIndustry"
+            >
               <option value="Autos">Autos</option>
               <option value="Banks">Banks</option>
-              <option value="Banks Diversified">Banks Diversified</option>
+              <option value="Banks%20Diversified">Banks Diversified</option>
               <option value="Software">Software</option>
-              <option value="Banks Regional">Banks Regional</option>
-              <option value="Beverages Alcoholic">Beverages Alcoholic</option>
-              <option value="Beverages Brewers">Beverages Brewers</option>
-              <option value="Beverages Non-Alcoholic"
+              <option value="Banks%20Regional">Banks Regional</option>
+              <option value="Beverages%20Alcoholic">Beverages Alcoholic</option>
+              <option value="Beverages%20Brewers">Beverages Brewers</option>
+              <option value="Beverages%20Non-Alcoholic"
                 >Beverages Non-Alcoholic</option
               >
             </select>
@@ -87,7 +117,12 @@
 
           <div class="form-group">
             <label for="exchange">Select Exchange</label>
-            <select id="exchange" class="form-control" name="exchange">
+            <select
+              id="exchange"
+              class="form-control"
+              name="exchange"
+              [ngModel]="defaultExchange"
+            >
               <option value="nyse">NYSE</option>
               <option value="nasdaq">NASDAQ</option>
               <option value="amex">AMEX</option>
